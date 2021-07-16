@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1580527864 source:g:\spl1-20200129t051253z-001\spl1\main.cpp
+	<bits/stdc++.h>
+	<stack>
+	<string>
+	<algorithm>
+
+1624102893 source:c:\users\user\desktop\spl1-20200129t051253z-001\spl1\main.cpp
+	<stdio.h>
+	"node.h"
+
+1624546726 c:\users\user\desktop\spl1-20200129t051253z-001\spl1\node.h
+	<string.h>
+	<bits/stdc++.h>
+	<string.h>
+
+1626416804 source:c:\users\user\desktop\spl1-20200129t051253z-001\spl1\parser.cpp
+	<fstream>
+	<string>
+	"node.h"
+
+1602495979 c:\users\user\desktop\spl1-20200129t051253z-001\spl1\parser.cpp
+	<iostream>
+	<fstream>
+

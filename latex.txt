@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+{html}\href {http://www.google.com}{This is a link}{This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+}{hello}{This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+}{hello}{Lorem ipsum}{and this is bold text}{This text is emphasized}{This text will be underlined.}{superscripted}{subscripted}\section*
+{Heading 1}\subsection*
+{Heading 2}{Heading 3}{Heading 4}{Heading 5}{Heading 6}\end{document}

@@ -80,42 +80,81 @@ if(tag[0]=='<' && tag[1]=='h' && tag[2]=='1')
          fstream fork2("latex.txt",std::fstream::app);
         fork2<<"\\"<<endl;
     }
+     if(tag[0]=='<' && tag[1]=='s' && tag[2]=='u' && tag[3]=='p')
+    {
+        fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\textsuperscript"<<endl;
 
-   /* if(tagstr[0]=='<' && tagstr[1]=='p' && tagstr[2]=='>')
+    }
+
+if(tag[0]=='<' && tag[1]=='h' && tag[2]=='3')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\subsubsection*"<<endl;
+
+    }
+
+    if(tag[0]=='<' && tag[1]=='h' && tag[2]=='4')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\paragraph"<<endl;
+
+    }
+    if(tag[0]=='<' && tag[1]=='h' && tag[2]=='5')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\subparagraph"<<endl;
+
+    }
+
+    if(tag[0]=='<' && tag[1]=='h' && tag[2]=='6')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\subsection*"<<endl;
+
+    }
+
+    if(tag[0]=='<' && tag[1]=='i')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\itshape"<<endl;
+
+    }
+    if(tag[0]=='<' && tag[1]=='b' && tag[2]=='>')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\bfseries"<<endl;
+
+    }
+    if(tag[0]=='<' && tag[1]=='e' && tag[2]=='m')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\emph"<<endl;
+
+    }
+
+      if(tag[0]=='<' && tag[1]=='u' && tag[2]=='>')
+    {
+         fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\underline"<<endl;
+
+    }
+
+     if(tag[0]=='<' && tag[1]=='s' && tag[2]=='u' && tag[3]=='b')
+    {
+        fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\textsubscript"<<endl;
+
+    }
+    if(tag[0]=='<' && tag[1]=='p' && tag[2]=='>')
     {
         // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<latex_attr<<endl;
+        fstream fork("latex.txt",std::fstream::app);
+        fork<<"\\\\"<<endl;
 
     }
+/*
 
-     if(tagstr[0]=='<' && tagstr[1]=='s' && tagstr[2]=='u' && tagstr[3]=='p')
-    {
-        // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<"\\textsuperscript"<<endl;
-    }
-
-
-    if(tagstr[0]=='<' && tagstr[1]=='h' && tagstr[2]=='3')
-    {
-        //newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<"\\subsubsection"<<endl;
-    }
-    if(tagstr[0]=='<' && tagstr[1]=='h' && tagstr[2]=='4')
-    {
-        // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<"\\paragraph"<<endl;
-    }
-    if(tagstr[0]=='<' && tagstr[1]=='h' && tagstr[2]=='5')
-    {
-        //newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<"\\subparagraph"<<endl;
-    }
-    if(tagstr[0]=='<' && tagstr[1]=='h' && tagstr[2]=='6')
-    {
-        // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
-        newfile<<"\\subsection"<<endl;
-
-    }
     if(tagstr[0]=='<' && tagstr[1]=='i')
     {
         // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
@@ -281,6 +320,17 @@ void lekhalekhi(string s1)
     string s2 = "{";
     s2+=s1+"}";
     fork<<s2;
+    fork<<"\\\\";
+
+}
+
+void lekhalekhi7(string s1)
+{
+    fstream fork("latex.txt",std::fstream::app);
+    string s2 = "{";
+    s2+=s1+"}";
+    fork<<s2;
+
 }
 void lekhalekhi2()
 {
@@ -325,7 +375,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
 
                     latex_attr = str;
                    // cout << latex_attr << "\t\t" ;
-                    if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!')
+                    if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='h')
                     {
                         //operation1(str);
                         lekhalekhi3(latex_attr);
@@ -339,6 +389,11 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
                     {
                         lekhalekhi4(latex_attr);
                     }
+                    else if(tagStr[0]=='<' && tagStr[1]=='h')
+                    {
+                        lekhalekhi7(latex_attr);
+                    }
+
                     else if(tagStr[0]=='<' && tagStr[1]=='t' && tagStr[2]=='d')
                     {
                         lekhalekhi5(latex_attr);

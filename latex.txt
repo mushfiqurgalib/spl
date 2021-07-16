@@ -3,16 +3,29 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \begin{document}
-{html}\href {http://www.google.com}{This is a link}{This paragraph
+{html}\\{class=gb1 }\\\href {http://www.google.com}{This is a link}\\\itshape
+{Lorem ipsum}\\\itshape
+\\
+{This paragraph
 contains a lot of lines
 in the source code,
 but the browser
 ignores it.
-}{hello}{This paragraph
+}\\{hello}\\\\
+{This paragraph
 contains a lot of lines
 in the source code,
 but the browser
 ignores it.
-}{hello}{Lorem ipsum}{and this is bold text}{This text is emphasized}{This text will be underlined.}{superscripted}{subscripted}\section*
+}\\{hello}\\\bfseries
+{and this is bold text}\\\emph
+{This text is emphasized}\\\underline
+{This text will be underlined.}\\\textsuperscript
+{superscripted}\\\textsubscript
+{subscripted}\\\section*
 {Heading 1}\subsection*
-{Heading 2}{Heading 3}{Heading 4}{Heading 5}{Heading 6}\end{document}
+{Heading 2}\subsubsection*
+{Heading 3}\paragraph
+{Heading 4}\subparagraph
+{Heading 5}\subsection*
+{Heading 6}\end{document}

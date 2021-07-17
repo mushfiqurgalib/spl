@@ -14,7 +14,7 @@ using namespace std ;
 string emptyTagList[] = {"<br>", "<hr>", "<img>", "<input>", "<link>", "<meta>", "<source>"} ;
 int flagForEmptyTag = 0 ;
 fstream newfile;
- string tabinitial="\\begin{tabular}\n {c c c }";
+ //string tabinitial="\\begin{tabular}\n {c c c }";
 
 
 Node *root, *current;
@@ -78,7 +78,7 @@ if(tag[0]=='<' && tag[1]=='h' && tag[2]=='1')
       if(tag[0]=='<' && tag[1]=='a' && tag[2]=='>')
     {
          fstream fork2("latex.txt",std::fstream::app);
-        fork2<<"\\"<<endl;
+        fork2<<"\\\\"<<endl;
     }
      if(tag[0]=='<' && tag[1]=='s' && tag[2]=='u' && tag[3]=='p')
     {
@@ -114,7 +114,7 @@ if(tag[0]=='<' && tag[1]=='h' && tag[2]=='3')
 
     }
 
-    if(tag[0]=='<' && tag[1]=='i')
+    if(tag[0]=='<' && tag[1]=='i' && tag[2]=='>')
     {
          fstream fork("latex.txt",std::fstream::app);
         fork<<"\\itshape"<<endl;
@@ -260,7 +260,7 @@ void lekhalekhi5(string s1)
     fstream fork4("latex.txt",std::fstream::app);
 
 
-    fork4<<tabinitial+s1+"\\end{tabular}";
+//    fork4<<tabinitial+s1+"\\end{tabular}";
 
 }
 void lekhalekhi4(string s1)
@@ -289,13 +289,15 @@ void lekhalekhi3(string s1)
     //cout<<axx;
     fstream fork2("latex.txt",std::fstream::app);
     string s2="\\";
+    string s4="\\\\";
     s1.replace(5,1,"{");
     s1.replace(4,1," ");
     s1.replace(axx-1,1,"");
     // s1.replace(s1.end()-2,1,"");
    string  s3="";//"{This is a link}";
-    s2+=s1+'}'+s3;
+    s2+=s4+s1+'}'+s3;
     fork2<<s2;
+    //s1.erase();
 }
 void lekhalekhi6(string s1)
 {
@@ -303,10 +305,10 @@ void lekhalekhi6(string s1)
     axx1=s1.size();
     //cout<<axx;
     fstream fork6("latex.txt",std::fstream::app);
-    string s2="\\";
-    s1.replace(0,1,"");
-    s1.replace(1,1,"{");
-    s1.replace(axx1-2,1,"}");
+    string s2="";
+    s1.replace(0,1,"{");
+    //s1.replace(1,1,"{");
+   // s1.replace(axx1-1,1,"}");
     //s1.replace(axx-1,1,"");
     // s1.replace(s1.end()-2,1,"");
   // string  s3="{This is a link}";
@@ -320,7 +322,14 @@ void lekhalekhi(string s1)
     string s2 = "{";
     s2+=s1+"}";
     fork<<s2;
-    fork<<"\\\\";
+   // fork<<"\\\\";
+
+}
+void lekhalekhi8(string s1)
+{
+    fstream fork("latex.txt",std::fstream::app);
+
+    s1.erase();
 
 }
 
@@ -375,16 +384,24 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
 
                     latex_attr = str;
                    // cout << latex_attr << "\t\t" ;
-                    if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='h')
+
+                     if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='h')
                     {
                         //operation1(str);
                         lekhalekhi3(latex_attr);
+                       // cout<<latex_attr<<"wow";
+                        string ass=latex_attr.erase();
+                        //cout<<ass<<"delete";
+
+                        //lekhalekhi8(ass);
+
                     }
-                  /*  if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='~')
+                    else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='~')
                     {
                         //operation1(str);
+                     //   cout<<"Here it is";
                         lekhalekhi6(latex_attr_spcl);
-                    }*/
+                    }
                     else if(tagStr[0]=='<' && tagStr[1]=='i' && tagStr[2]=='m')
                     {
                         lekhalekhi4(latex_attr);
@@ -393,7 +410,21 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
                     {
                         lekhalekhi7(latex_attr);
                     }
+                    else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='c')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
 
+                    else if(tagStr[0]=='<' && tagStr[1]=='s' && tagStr[2]=='c')
+                    {
+                        lekhalekhi8(latex_attr);
+                    }
+
+                     else if(tagStr[0]=='<' && tagStr[1]=='s' && tagStr[2]=='t')
+                    {
+                        lekhalekhi8(latex_attr);
+                    }
                     else if(tagStr[0]=='<' && tagStr[1]=='t' && tagStr[2]=='d')
                     {
                         lekhalekhi5(latex_attr);
@@ -618,7 +649,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 
         else if(flag==2)
         {
-            for(int i=0 ; i<10 && current->children[i]!=NULL ; i++)
+            for(int i=0 ; i<20 && current->children[i]!=NULL ; i++)
             {
                 string str = current->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -631,7 +662,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         else if(flag==3)
         {
 
-            for(int i=0 ; i<10 && current->parent->children[i]!=NULL ; i++)
+            for(int i=0 ; i<20 && current->parent->children[i]!=NULL ; i++)
             {
                 string str = current->parent->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -692,7 +723,7 @@ void menu()
         //if(choice == 4);
         if(choice==4)
         {
-            //getTagAttributeOrString(root,tagStr,'!');
+            getTagAttributeOrString(root,tagStr,'!');
         }
         if(choice==5)
         {
@@ -700,7 +731,7 @@ void menu()
 
             operation1(tagStr);
 
-           // getTagAttributeOrString(root,tagStr,'~');
+          // getTagAttributeOrString(root,tagStr,'~');
 
         }
 
@@ -714,10 +745,20 @@ void outputTreePreOrder(Node *parent)
     string tag=parent->tag;
     if(tag=="<a>")
     {
+        // operation1(tag);
         getTagAttributeOrString(root,tag,'!');
 
           getTagAttributeOrString(root,tag,'~');
 
+    }
+
+    else if(tag=="<script>")
+    {
+        getTagAttributeOrString(root,tag,'~');
+    }
+    else if(tag=="<style>")
+    {
+        getTagAttributeOrString(root,tag,'~');
     }
     else{
     //cout<<tag<<endl;

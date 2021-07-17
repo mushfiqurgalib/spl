@@ -3,26 +3,31 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \begin{document}
-{html}\\{class=gb1 }\\\href {http://www.google.com}{This is a link}\\\itshape
-{Lorem ipsum}\\\itshape
-\\
+{html}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\itshape
+{Lorem ipsum}\\
 {This paragraph
 contains a lot of lines
 in the source code,
 but the browser
 ignores it.
-}\\{hello}\\\\
+}{hello}{its me}\\
 {This paragraph
 contains a lot of lines
 in the source code,
 but the browser
 ignores it.
-}\\{hello}\\\bfseries
-{and this is bold text}\\\emph
-{This text is emphasized}\\\underline
-{This text will be underlined.}\\\textsuperscript
-{superscripted}\\\textsubscript
-{subscripted}\\\section*
+}{hello}{its me}\bfseries
+{and this is bold text}\\
+{This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+}{hello}{its me}\emph
+{This text is emphasized}\underline
+{This text will be underlined.}\textsuperscript
+{superscripted}\textsubscript
+{subscripted}\section*
 {Heading 1}\subsection*
 {Heading 2}\subsubsection*
 {Heading 3}\paragraph

@@ -3,7 +3,137 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \begin{document}
-{html}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\itshape
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\end{document}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
+{<p>}\\
+{<p>}\\
+{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\begin{document}
+{html}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\itshape
 {Lorem ipsum}\\
 {This paragraph
 contains a lot of lines
@@ -11,19 +141,9 @@ in the source code,
 but the browser
 ignores it.
 }{hello}{its me}\\
-{This paragraph
-contains a lot of lines
-in the source code,
-but the browser
-ignores it.
-}{hello}{its me}\bfseries
+\bfseries
 {and this is bold text}\\
-{This paragraph
-contains a lot of lines
-in the source code,
-but the browser
-ignores it.
-}{hello}{its me}\emph
+\emph
 {This text is emphasized}\underline
 {This text will be underlined.}\textsuperscript
 {superscripted}\textsubscript

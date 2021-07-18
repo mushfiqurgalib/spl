@@ -410,6 +410,12 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
                     {
                         lekhalekhi7(latex_attr);
                     }
+                     else if(tagStr[0]=='<' && tagStr[1]=='p' && tagStr[2]=='>' && latex_attr_spcl[0]=='~' && latex_attr_spcl[1]=='&')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
+
                     else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='c')
                     {
                         //operation1(str);

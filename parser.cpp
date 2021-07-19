@@ -34,7 +34,7 @@ Node* createNode(string tag)
 
     temp->tag = tag ;
 
-    for(int i=0 ; i<20 ; i++)
+    for(int i=0 ; i<40 ; i++)
     {
         temp->children[i] = NULL ;
     }
@@ -45,7 +45,7 @@ Node* createNode(string tag)
 void insertNode(Node *newNode, int flag)
 {
     newNode->parent = current ;
-    for(int i=0 ; i<20 ; i++)
+    for(int i=0 ; i<40 ; i++)
     {
         if(current->children[i]==NULL)
         {
@@ -372,7 +372,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
     if(current->tag == tagStr)
     {
         string str ;
-        for(int i=0 ; i<20 ; i++)
+        for(int i=0 ; i<40 ; i++)
         {
             if((current->children[i])!=NULL )
             {
@@ -416,12 +416,33 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
                         //operation1(str);
                         lekhalekhi8(latex_attr);
                     }
+                     else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='~' && latex_attr_spcl[1]=='&')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
 
                     else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='c')
                     {
                         //operation1(str);
                         lekhalekhi8(latex_attr);
                     }
+                    else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='m')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
+                    else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='i' && latex_attr_spcl[2]=='d')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
+                    else if(tagStr[0]=='<' && tagStr[1]=='a' && tagStr[2]=='>' && latex_attr_spcl[0]=='!' && latex_attr_spcl[1]=='t')
+                    {
+                        //operation1(str);
+                        lekhalekhi8(latex_attr);
+                    }
+
 
                     else if(tagStr[0]=='<' && tagStr[1]=='s' && tagStr[2]=='c')
                     {
@@ -456,7 +477,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
         }
     }
 
-    for(int i=0 ; i<20 ; i++)
+    for(int i=0 ; i<40 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -662,7 +683,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 
         else if(flag==2)
         {
-            for(int i=0 ; i<20 && current->children[i]!=NULL ; i++)
+            for(int i=0 ; i<40 && current->children[i]!=NULL ; i++)
             {
                 string str = current->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -675,7 +696,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         else if(flag==3)
         {
 
-            for(int i=0 ; i<20 && current->parent->children[i]!=NULL ; i++)
+            for(int i=0 ; i<40 && current->parent->children[i]!=NULL ; i++)
             {
                 string str = current->parent->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -686,7 +707,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         }
     }
 
-    for(int i=0 ; i<10 ; i++)
+    for(int i=0 ; i<40 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -776,14 +797,17 @@ void outputTreePreOrder(Node *parent)
     {
         getTagAttributeOrString(root,tag,'~');
     }
-
+  /*  else if(tag=="<img>")
+    {
+        getTagAttributeOrString(root,tag,'!');
+    }*/
 
     else{
      //cout<<tag<<endl;
      operation1(tag);
 
            getTagAttributeOrString(root,parent->tag,'~');}
-    for(int i=0 ; i<20 ; i++)
+    for(int i=0 ; i<40 ; i++)
     {
 
         if((parent->children[i])!=NULL)

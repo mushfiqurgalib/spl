@@ -3,136 +3,6 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\end{document}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\\
-{<p>}\\
-{<p>}\\
-{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
-\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}{<p>}{<p>}{<p>}\documentclass{article}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\begin{document}
 {html}\\\href {https://news.google.com/?tab=wn}\\\href {https://mail.google.com/mail/?tab=wm}\\\href {mailto:community@VLR.gg"}{News}{Gmail}{Contact}\itshape
 {Lorem ipsum}\\
 {This paragraph
@@ -141,11 +11,12 @@ in the source code,
 but the browser
 ignores it.
 }{hello}{its me}\\
-\bfseries
-{and this is bold text}\\
+\\
 \emph
 {This text is emphasized}\underline
-{This text will be underlined.}\textsuperscript
+{This text will be bold}{text will be underlined.}\bfseries
+{This }\underline
+\textsuperscript
 {superscripted}\textsubscript
 {subscripted}\section*
 {Heading 1}\subsection*

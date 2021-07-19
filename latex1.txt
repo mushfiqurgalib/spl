@@ -1,0 +1,6 @@
+\documentclass{article}\usepackage{hyperref}\usepackage{graphicx}\usepackage{tabularx}\begin{document}{html}\\\href{https://news.google.com/?tab=wn}{News}\\\href{https://mail.google.com/mail/?tab=wm}{Gmail}\\\href{mailto:community@VLR.gg"}{Contact}\itshape{Lorem ipsum}\\{This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+}\\{hello}\\{its me}\emph{This text is emphasized}\bfseries{This text will be bold}\underline{This text will be underlined.}\textsuperscript{superscripted}\textsubscript{subscripted}\section*{Heading 1}\subsection*{Heading 2}\subsubsection*{Heading 3}\paragraph{Heading 4}\subparagraph{Heading 5}\subsection*{Heading 6}\end{document}

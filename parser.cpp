@@ -1,6 +1,7 @@
 /*#include<iostream>
 #include<fstream>*/
 #include<string>
+#include<map>
 #include"node.h"
 //
 using namespace std ;
@@ -15,7 +16,7 @@ string emptyTagList[] = {"<br>", "<hr>", "<img>", "<input>", "<link>", "<meta>",
 int flagForEmptyTag = 0 ;
 fstream newfile;
 //string tabinitial="\\begin{tabular}\n {c c c }";
-
+map<string,int>mp;
 
 Node *root, *current;
 int headcount=0,buttoncount=0,count1=0,linkcount=0,colcount=0;
@@ -585,7 +586,7 @@ void createTreeControl(void)
 {
 
     ifstream iFile ;
-    iFile.open("hello.html") ;
+    iFile.open("b.html") ;
 
     string str = "" ;
     char ch,flag='0' ;
@@ -793,7 +794,6 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     string tag=parent->tag;
 
 
-
     /*if(tag=="<a>")
     {
         // operation1(tag);
@@ -821,7 +821,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     }*/
 
     //cout<<tag<<endl;
-
+//cout<<tag.substr(0,3)<<"F";
     if(tag=="<p>")
     {
         fileprint+="\\\\" ;
@@ -855,11 +855,12 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     {
         return;
     }
-    else if(tag=="<div>")
+    else if(tag=="<meta>")
     {
         return;
     }
-    else if(tag[0]=='<' && tag[1]=='!' && tag[2]=='D')
+
+    else if(tag[0]=='<' && tag[1]=='!' && tag[2]=='d' || tag[2]=='D' )
     {
         tag.erase();
         fileprint+="\\documentclass{article}";
@@ -867,6 +868,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
         fileprint+="\\usepackage{graphicx}";
         fileprint+="\\usepackage{tabularx}";
         fileprint+="\\begin{document}";
+
 
     }
 
@@ -964,11 +966,34 @@ void outputTreePreOrder(Node *parent,string &fileprint)
             string  s3=tag;//"{This is a link}";
             fileprint+=s3;
            // fileprint+=s2;
+
         }
-        else if(tag[0]=='!' && tag[1]=='c' && tag[2]=='l')
+         else if(mp[(tag.substr(0,3))]!=0)
+    {
+
+        tag.erase();
+    }
+
+       /* else if(tag[0]=='!' && tag[1]=='c' && tag[2]=='l')
         {
             tag.erase();
         }
+        else if(tag[0]=='!' && tag[1]=='t' && tag[2]=='a')
+        {
+            tag.erase();
+        }
+        else if(tag[0]=='!' && tag[1]=='i' && tag[2]=='d')
+        {
+            tag.erase();
+        }
+         else if(tag[0]=='!' && tag[1]=='s' && tag[2]=='t')
+        {
+            tag.erase();
+        }
+         else if(tag[0]=='~' && tag[1]=='&')
+        {
+            tag.erase();
+        }*/
 
         else
         {
@@ -993,12 +1018,33 @@ void outputTreePreOrder(Node *parent,string &fileprint)
 
 void  parser()
 {
+    mp.insert({"!cl",1});
+mp.insert({"!ta",2});
+mp.insert({"!id",3});
+mp.insert({"!sc",4});
+mp.insert({"!st",5});
+mp.insert({"~&#",1});
+mp.insert({"<no",1});
+/*mp.insert({"<b>",6});
+mp.insert({"<h1>",7});
+mp.insert({"<h2>",1});
+mp.insert({"<h3>",1});
+mp.insert({"<h4>",1});
+mp.insert({"<h5>",1});
+mp.insert({"<h6>",1});
+mp.insert({"<u>",1});
+mp.insert({"<emph>",1});
+mp.insert({"<sup>",1});
+mp.insert({"<sub>",1});
+mp.insert({"<!doctypehtml>",1});
+mp.insert({"<!Doctypehtml>",1});*/
     createLinkList() ;
     createTreeControl() ;
     string s;
     outputTreePreOrder(root,s) ;
     fstream fork("latex1.txt",std::fstream::app);
     fork<<s;
+    fork<<endl;
     fork<<"\\end{document}";
 
 

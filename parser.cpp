@@ -5,8 +5,8 @@
 #include"node.h"
 //
 using namespace std ;
-
-
+int cnt;
+int htmlcounter;
 /*struct Node
 {
     string tag ;
@@ -15,8 +15,8 @@ using namespace std ;
 string emptyTagList[] = {"<br>", "<hr>", "<img>", "<input>", "<link>", "<meta>", "<source>"} ;
 int flagForEmptyTag = 0 ;
 fstream newfile;
-//string tabinitial="\\begin{tabular}\n {c c c }";
-map<string,int>mp;
+
+map<string,int>mp;  //map to keep unusual HTML tags
 
 Node *root, *current;
 int headcount=0,buttoncount=0,count1=0,linkcount=0,colcount=0;
@@ -31,11 +31,12 @@ void createLinkList()
 Node* createNode(string tag)
 {
 
+
     Node *temp = new Node ;
 
     temp->tag = tag ;
 
-    for(int i=0 ; i<40 ; i++)
+    for(int i=0 ; i<15 ; i++)
     {
         temp->children[i] = NULL ;
     }
@@ -46,7 +47,7 @@ Node* createNode(string tag)
 void insertNode(Node *newNode, int flag)
 {
     newNode->parent = current ;
-    for(int i=0 ; i<40 ; i++)
+    for(int i=0 ; i<15 ; i++)
     {
         if(current->children[i]==NULL)
         {
@@ -62,17 +63,16 @@ string latex_attr;
 void operation1(string tag)
 {
 
-//   fstream newfile;
+
 
     if(tag[0]=='<' && tag[1]=='h' && tag[2]=='2')
     {
-        //newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
+
         fstream fork("latex.txt",std::fstream::app);
         fork<<"\\subsection*"<<endl;
     }
     if(tag[0]=='<' && tag[1]=='h' && tag[2]=='1')
     {
-        //newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
         fstream fork("latex.txt",std::fstream::app);
         fork<<"\\section*"<<endl;
 
@@ -150,13 +150,12 @@ void operation1(string tag)
     }
     if(tag[0]=='<' && tag[1]=='p' && tag[2]=='>')
     {
-        // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
+
         fstream fork("latex.txt",std::fstream::app);
         fork<<"\\\\"<<endl;
 
     }
     /*
-
         if(tagstr[0]=='<' && tagstr[1]=='i')
         {
             // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
@@ -172,19 +171,16 @@ void operation1(string tag)
             // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
             newfile<<"\\emph"<<endl;
         }
-
         if(tagstr[0]=='<' && tagstr[1]=='u' && tagstr[2]=='>')
         {
             // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
             newfile<<"\\underline"<<endl;
         }
-
         if(tagstr[0]=='<' && tagstr[1]=='s' && tagstr[2]=='u' && tagstr[3]=='b')
         {
             // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
             newfile<<"\\textsubscript"<<endl;
         }
-
         if(tagstr[0]=='<' && tagstr[1]=='i' && tagstr[2]=='m' && tagstr[3]=='g')
         {
             newfile<<"\\includegraphics"<<endl;
@@ -193,16 +189,9 @@ void operation1(string tag)
         {
             // newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
             newfile<<"\\begin{itemize}"<<endl;
-
-
-
             newfile<<"\\item"<<endl;
-
             newfile<<"\\end{itemize}"<<endl;
         }
-
-
-
         /* if(str[0]=='<' && str[1]=='t' && str[2]=='i')
          {
              newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
@@ -262,9 +251,10 @@ void lekhalekhi5(string s1)
     fstream fork4("latex.txt",std::fstream::app);
 
 
-//    fork4<<tabinitial+s1+"\\end{tabular}";
+
 
 }
+//function to convert images
 void lekhalekhi4(string s1)
 {
     fstream fork3("latex.txt",std::fstream::app);
@@ -284,6 +274,7 @@ void lekhalekhi4(string s1)
     s2+=s1;
     fork3<<s2;
 }
+//function to convert link
 void lekhalekhi3(string s1)
 {
     int axx;
@@ -345,8 +336,8 @@ void lekhalekhi7(string s1)
 }
 void lekhalekhi2()
 {
-    fstream fork("latex.txt",std::fstream::app);
-    fork<<"\\end{document}";
+   // fstream fork("latex.txt",std::fstream::app);
+    //fork<<"\\end{document}";
 }
 /*void insertNode(Node *newNode, int flag)
 {
@@ -373,7 +364,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
     if(current->tag == tagStr)
     {
         string str ;
-        for(int i=0 ; i<40 ; i++)
+        for(int i=0 ; i<15 ; i++)
         {
             if((current->children[i])!=NULL )
             {
@@ -473,7 +464,6 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
                     /*  else if(tagStr[0]=='<' && tagStr[1]=='p' && tagStr[2]=='>')
                       {
                             lekhalekhi(latex_attr);
-
                       }*/
                     else
                     {
@@ -489,7 +479,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
         }
     }
 
-    for(int i=0 ; i<40 ; i++)
+    for(int i=0 ; i<15 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -508,22 +498,22 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
 
 
 
-
+//To count tag numbers
 void operation(string str)
 {
 
 
 
 
-    if(str[0]=='<' && str[1]=='h' && str[2]=='t')
+    if(str[0]=='<' && str[1]=='h' && str[2]=='t' )
     {
 
-        newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
+       /* newfile.open("latex.txt",std::fstream::in | std::fstream::out | std::fstream::app);
         newfile<<"\\documentclass{article}"<<endl;
         newfile<<"\\usepackage{hyperref}"<<endl;
         newfile<<"\\usepackage{graphicx}"<<endl;
         newfile<<"\\usepackage{tabularx}"<<endl;
-        newfile<<"\\begin{document}"<<endl;
+        newfile<<"\\begin{document}"<<endl;*/
         return;
     }
     // cout << current->tag << endl;
@@ -581,7 +571,7 @@ void operation(string str)
     Node *newNode = createNode(str) ;
     insertNode(newNode,flag) ;
 }
-
+//To create tree of a HTML file
 void createTreeControl(void)
 {
 
@@ -607,6 +597,7 @@ void createTreeControl(void)
         root = createNode(str) ;
         //count++;
         current = root ;
+
 
 
         while(current!=NULL)
@@ -673,6 +664,7 @@ void createTreeControl(void)
                 operation(str) ;
             // operation1(str);
         }
+
     }
 
     else
@@ -680,7 +672,7 @@ void createTreeControl(void)
 
 }
 
-
+//to get a tag's parent,children and siblings
 void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 {
 
@@ -695,7 +687,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 
         else if(flag==2)
         {
-            for(int i=0 ; i<40 && current->children[i]!=NULL ; i++)
+            for(int i=0 ; i<15 && current->children[i]!=NULL ; i++)
             {
                 string str = current->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -708,7 +700,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         else if(flag==3)
         {
 
-            for(int i=0 ; i<40 && current->parent->children[i]!=NULL ; i++)
+            for(int i=0 ; i<15 && current->parent->children[i]!=NULL ; i++)
             {
                 string str = current->parent->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -719,7 +711,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         }
     }
 
-    for(int i=0 ; i<40 ; i++)
+    for(int i=0 ; i<15 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -730,20 +722,20 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 
 }
 
-
+//Menu
 void menu()
 {
     cout<<"total tag count "<<count1<<endl;
     cout<<"total button "<<buttoncount<<endl;
-    cout<<"total column "<<colcount<<endl;
+   // cout<<"total column "<<colcount<<endl;
     cout<<"total link "<<linkcount<<endl;
     while(true)
     {
         int choice ;
 
-        //  cout<<headcount;
 
-        cout << "\n1.tag's parent\n2.tag's children\n3. tag's sibilings \n4.To get latex part of empty html tags\n5.To get latex part of other tag's String \n6.exit \n" ;
+
+        cout << "\n1.tag's parent\n2.tag's children\n3. tag's sibilings \n6.exit \n" ;
         cin >> choice ;
         if(choice==6)
         {
@@ -766,7 +758,7 @@ void menu()
         {
             getTagParentsChildrensSiblings(root, tagStr, 3) ;
         }
-        //if(choice == 4);
+
         if(choice==4)
         {
             getTagAttributeOrString(root,tagStr,'!');
@@ -777,7 +769,7 @@ void menu()
 
             operation1(tagStr);
 
-            // getTagAttributeOrString(root,tagStr,'~');
+
 
         }
 
@@ -798,11 +790,8 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     {
         // operation1(tag);
         getTagAttributeOrString(root,tag,'!');
-
         getTagAttributeOrString(root,tag,'~');
-
     }
-
     else if(tag=="<script>")
     {
         getTagAttributeOrString(root,tag,'~');
@@ -843,6 +832,10 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     {
         tag.erase() ;
     }
+    else if(tag=="<link>")
+    {
+        tag.erase() ;
+    }
     else if(tag=="<script>")
     {
         return;
@@ -857,6 +850,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
     }
     else if(tag=="<meta>")
     {
+
         return;
     }
 
@@ -868,14 +862,17 @@ void outputTreePreOrder(Node *parent,string &fileprint)
         fileprint+="\\usepackage{graphicx}";
         fileprint+="\\usepackage{tabularx}";
         fileprint+="\\begin{document}";
+        fileprint+="\n";
 
 
     }
-
+//convert bold tag
     else if(tag=="<b>")
     {
-        fileprint+="\\bfseries" ;
+        fileprint+="\\textbf" ;
     }
+//convert header1 tag
+
     else if(tag=="<h1>")
     {
 
@@ -883,6 +880,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
         fileprint+="\\section*";
 
     }
+//convert header2 tag
     else if(tag=="<h2>")
     {
 
@@ -890,61 +888,91 @@ void outputTreePreOrder(Node *parent,string &fileprint)
         fileprint+="\\subsection*";
 
     }
+//convert header3 tag
     else if(tag=="<h3>")
     {
 
 
         fileprint+="\\subsubsection*";
     }
+//convert header4 tag
     else if(tag=="<h4>")
     {
 
 
         fileprint+="\\paragraph";
     }
+//convert header5 tag
     else if(tag=="<h5>")
     {
 
 
         fileprint+="\\subparagraph";
     }
-
+//convert header6 tag
     else if(tag=="<h6>")
     {
 
 
         fileprint+="\\subsection*";
     }
+//convert italic tag
     else if(tag=="<i>")
     {
 
 
         fileprint+="\\itshape";
     }
+//convert emphasis tag
     else if(tag=="<em>")
     {
 
 
         fileprint+="\\emph";
     }
+//convert underline tag
     else if(tag=="<u>")
     {
         fileprint+="\\underline";
 
 
     }
+//convert subscript tag
     else if(tag=="<sub>")
     {
 
         fileprint+="\\textsubscript";
 
     }
+
+//convert superscript tag
     else if(tag=="<sup>")
     {
 
         fileprint+="\\textsuperscript";
 
     }
+  else if(tag.substr(1,3)=="rel")
+        {
+            int axx1;
+            for(int i=0;i<5;i++)
+            {
+            tag.replace(0,1,"");}
+            tag.replace(0,1,"{");
+             axx1=tag.size();
+            tag.replace(axx1-2,1,"}");
+            string s4=tag;
+            fileprint+=s4;
+        }
+
+//convert division tag
+     else if(tag=="<div>")
+    {
+
+        fileprint+="\\\\";
+
+    }
+    //convert hyperlink tag
     else
     {
         if(tag.substr(1,4)=="href")
@@ -955,7 +983,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
             //cout<<axx;
             // fstream fork2("latex.txt",std::fstream::app);
             fileprint+="\\";
-            fileprint+="\\\\";
+          //  fileprint+="\\\\";
             tag.replace(0,1,"");
             tag.replace(4,1,"{");
             tag.replace(5,1,"");
@@ -968,6 +996,8 @@ void outputTreePreOrder(Node *parent,string &fileprint)
            // fileprint+=s2;
 
         }
+
+
          else if(mp[(tag.substr(0,3))]!=0)
     {
 
@@ -1006,7 +1036,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
 
     // getTagAttributeOrString(root,parent->tag,'~');
 
-    for(int i=0 ; i<40 ; i++)
+    for(int i=0 ; i<15 ; i++)
     {
 
         if((parent->children[i])!=NULL)
@@ -1025,7 +1055,8 @@ mp.insert({"!sc",4});
 mp.insert({"!st",5});
 mp.insert({"~&#",1});
 mp.insert({"<no",1});
-mp.insert({"<di",1});
+mp.insert({"~Go",1});
+//mp.insert({"<di",1});
 mp.insert({"!bg",1});
 mp.insert({"!it",1});
 mp.insert({"!la",1});
@@ -1075,9 +1106,10 @@ mp.insert({"<!Doctypehtml>",1});*/
     createTreeControl() ;
     string s;
     outputTreePreOrder(root,s) ;
-    fstream fork("latex1.txt",std::fstream::app);
+    fstream fork("latex.tex",std::fstream::app);
     fork<<s;
     fork<<endl;
+     fork<<endl;
     fork<<"\\end{document}";
 
 

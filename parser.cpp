@@ -36,7 +36,7 @@ Node* createNode(string tag)
 
     temp->tag = tag ;
 
-    for(int i=0 ; i<15 ; i++)
+    for(int i=0 ; i<20 ; i++)
     {
         temp->children[i] = NULL ;
     }
@@ -47,17 +47,20 @@ Node* createNode(string tag)
 void insertNode(Node *newNode, int flag)
 {
     newNode->parent = current ;
-    for(int i=0 ; i<15 ; i++)
+    for(int i=0 ; i<20 ; i++)
     {
+        if(current==NULL)
+
+        {break;}
         if(current->children[i]==NULL)
         {
             current->children[i] = newNode ;
             if(flag==1)
                 current = newNode ;
             break ;
-        }
+        }}
     }
-}
+
 
 string latex_attr;
 void operation1(string tag)
@@ -364,7 +367,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
     if(current->tag == tagStr)
     {
         string str ;
-        for(int i=0 ; i<15 ; i++)
+        for(int i=0 ; i<20 ; i++)
         {
             if((current->children[i])!=NULL )
             {
@@ -479,7 +482,7 @@ void getTagAttributeOrString(Node *current,string tagStr,char ch)
         }
     }
 
-    for(int i=0 ; i<15 ; i++)
+    for(int i=0 ; i<20 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -537,11 +540,7 @@ void operation(string str)
     {
         linkcount++;
     }
-    if(flagForEmptyTag == 1 &&  str[0] == '<')
-    {
-        flagForEmptyTag = 0 ;
-        current = current->parent ;
-    }
+
 
     if(str[1]=='/')
     {
@@ -566,6 +565,13 @@ void operation(string str)
         {
             flagForEmptyTag = 1 ;
         }
+    }
+    if(flagForEmptyTag == 1 &&  str[0] == '<')
+    {
+
+        flagForEmptyTag = 0 ;
+        if(current->parent!=NULL)
+        current = current->parent ;
     }
 
     Node *newNode = createNode(str) ;
@@ -687,7 +693,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
 
         else if(flag==2)
         {
-            for(int i=0 ; i<15 && current->children[i]!=NULL ; i++)
+            for(int i=0 ; i<20 && current->children[i]!=NULL ; i++)
             {
                 string str = current->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -700,7 +706,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         else if(flag==3)
         {
 
-            for(int i=0 ; i<15 && current->parent->children[i]!=NULL ; i++)
+            for(int i=0 ; i<20 && current->parent->children[i]!=NULL ; i++)
             {
                 string str = current->parent->children[i]->tag ;
                 if(str[0]!='~' && str[0]!='!')
@@ -711,7 +717,7 @@ void getTagParentsChildrensSiblings(Node *current,string tagStr,int flag)
         }
     }
 
-    for(int i=0 ; i<15 ; i++)
+    for(int i=0 ; i<20 ; i++)
     {
 
         if((current->children[i])!=NULL)
@@ -1036,7 +1042,7 @@ void outputTreePreOrder(Node *parent,string &fileprint)
 
     // getTagAttributeOrString(root,parent->tag,'~');
 
-    for(int i=0 ; i<15 ; i++)
+    for(int i=0 ; i<20 ; i++)
     {
 
         if((parent->children[i])!=NULL)
@@ -1055,7 +1061,7 @@ mp.insert({"!sc",4});
 mp.insert({"!st",5});
 mp.insert({"~&#",1});
 mp.insert({"<no",1});
-mp.insert({"~Go",1});
+//mp.insert({"~Go",1});
 //mp.insert({"<di",1});
 mp.insert({"!bg",1});
 mp.insert({"!it",1});

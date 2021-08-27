@@ -516,7 +516,7 @@ void createTreeControl(void)
 {
 
     ifstream iFile ;
-    iFile.open("c.html") ;
+    iFile.open("hello.html") ;
 
     string str = "" ;
     char ch,flag='0' ;
@@ -870,12 +870,13 @@ void outputTreePreOrder(Node *parent,string &fileprint)
 
         fileprint+="\\emph";
     }
+//convert unlisted tag
     else if(tag=="<ul>")
     {
         tag.erase();
         fileprint+="\\begin{itemize}";
     }
-
+//convert list item tag
     else if(tag=="<li>")
     {
         tag.erase();
